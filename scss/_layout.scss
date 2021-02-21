@@ -1,0 +1,406 @@
+/***MEDIA QUERIES ***/
+
+
+//
+//  RESPOND ABOVE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// @include media-breakpoint-up(sm) {}
+@mixin media-breakpoint-up($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    }
+
+    @else {
+
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+//
+//  RESPOND BELOW
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// @include media-breakpoint-down(sm) {}
+@mixin media-breakpoint-down($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (max-width: ($breakpoint-value - 1)) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    }
+
+    @else {
+
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+//
+//  RESPOND BETWEEN
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// @include media-breakpoint-between(sm, md) {}
+@mixin media-breakpoint-between($lower, $upper) {
+
+    // If both the lower and upper breakpoints exist in the map.
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+
+        // Get the lower and upper breakpoints.
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+
+        // Write the media query.
+        @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+
+        // If one or both of the breakpoints don't exist.
+    }
+
+    @else {
+
+        // If lower breakpoint is invalid.
+        @if (map-has-key($breakpoints, $lower)==false) {
+
+            // Log a warning.
+            @warn 'Your lower breakpoint was invalid: #{$lower}.';
+        }
+
+        // If upper breakpoint is invalid.
+        @if (map-has-key($breakpoints, $upper)==false) {
+
+            // Log a warning.
+            @warn 'Your upper breakpoint was invalid: #{$upper}.';
+        }
+    }
+}
+
+
+
+@mixin container() {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(#{$grid-gutter-width} / 2);
+    padding-right: calc(#{$grid-gutter-width} / 2);
+
+    @include media-breakpoint-up(md) {
+        max-width: $container-max-width;
+
+        &.header-container {
+            max-width: $header_container-max-width;
+        }
+    }
+}
+
+.container {
+    @include container();
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+@include media-breakpoint-up(md) {
+    .d-md-none {
+        display: none;
+    }
+
+    .d-md-block {
+        display: block;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.even-images-group {
+    padding: 3rem 0 0;
+
+    &+.layout-1 {
+        margin-top: -9rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 16rem 0 0;
+
+        &+.layout-1 {
+            margin-top: 0;
+        }
+    }
+
+    .group {
+        @extend .row;
+        align-items: flex-start;
+    }
+
+    .image {
+        background-size: contain;
+        position: relative;
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: 3rem solid $white;
+            border-width: 3rem 0 0;
+        }
+
+        img {
+            width: 100%;
+            // opacity: 0;
+        }
+
+        margin-bottom: 6.4%;
+
+        @include media-breakpoint-up(md) {
+            width: 43%;
+            margin-bottom: 0;
+
+            &:nth-child(odd) {
+                margin-right: 3.5%;
+            }
+
+            &:nth-child(even) {
+                margin-left: 3.5%;
+                margin-top: 6.4%;
+            }
+        }
+
+        &:nth-child(even) {
+            .stripes {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+                width: auto;
+                height: auto;
+                opacity: 1;
+                transform: translateX(40%) translateY(-19%);
+                max-width: 9.9rem;
+            }
+        }
+
+    }
+}
+
+.fullwidth-big-title {
+    padding: 9rem 0 1rem;
+
+    @include media-breakpoint-up(lg) {
+        padding: 17rem 0 1rem;
+    }
+}
+
+.layout-1 {
+    padding-bottom: 13.5rem;
+
+    .group {
+        padding-top: 15rem;
+
+        @extend .row;
+
+        .title-space {
+            width: 100%;
+            align-self: flex-start;
+            padding-bottom: 3rem;
+
+            &:empty {
+                display: none;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 25%;
+
+                &:empty {
+                    display: block;
+                }
+            }
+        }
+
+        .content-space {
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                width: 75%;
+            }
+
+            .links {
+                margin-right: auto;
+
+                a {
+                    display: block;
+                }
+            }
+        }
+
+        h2 {
+            padding: 0rem 0 10rem;
+            @include media-breakpoint-up(xl) {
+                padding: 10rem 0;
+            }
+        }
+
+        &+.image {
+            margin-top: 5rem;
+        }
+    }
+
+}
+
+.layout-2 {
+    @include media-breakpoint-up(xl) {
+        .container {
+            padding-left: 5.6%;
+            padding-right: 5.6%;
+        }
+    }
+
+
+    .screens-grid {
+        @extend.row;
+        padding: 5.5rem 3rem;
+        position: relative;
+        margin: -2rem;
+
+        @include media-breakpoint-up(lg) {
+            margin: calc(#{$grid-gutter-width} * -1);
+            padding: 18rem 0 0;
+        }
+
+        .image {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding: 2rem;
+
+            @include media-breakpoint-up(lg) {
+                padding: $grid-gutter-width;
+            }
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        .column {
+            @extend .row;
+
+            @include media-breakpoint-up(lg) {
+
+                width: calc(53% + #{$grid-gutter-width});
+                align-items: flex-start;
+
+                &:nth-child(2) {
+                    width: calc(47% - #{$grid-gutter-width});
+                }
+
+            }
+
+            &:nth-child(1) {
+                .image {
+                    width: 100%;
+
+                    &:nth-child(2) {
+                        width: 54%;
+                        align-self: flex-end;
+                    }
+
+                    &:nth-child(3) {
+                        width: 46%;
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .group {
+        @extend .row;
+        padding: 0 calc(#{$grid-gutter-width}/2);
+
+        .title-space {
+            width: 100%;
+            align-self: flex-start;
+            padding-bottom: 3rem;
+
+            @include media-breakpoint-up(lg) {
+                width: calc(50% - calc(#{$grid-gutter-width}/2));
+            }
+        }
+
+        .content-space {
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                width: calc(50% + calc(#{$grid-gutter-width}/2));
+            }
+        }
+    }
+
+    .even-images-group {
+        .image {
+            width: 100%;
+
+            @include media-breakpoint-up(sm) {
+                width: calc(50% - calc(#{$grid-gutter-width}/2));
+
+                &:nth-child(odd) {
+                    margin-right: calc(#{$grid-gutter-width}/2);
+                }
+
+                &:nth-child(even) {
+                    margin-left: calc(#{$grid-gutter-width}/2);
+                }
+            }
+        }
+    }
+}
