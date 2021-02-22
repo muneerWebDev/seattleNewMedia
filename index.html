@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="preload" href="fonts/poppins/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins/Poppins-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins/Poppins-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
     <title>Seattle New Media</title>
 </head>
 
@@ -17,9 +23,6 @@
                 <div class="logo">
                     <img src="images/logo.png" alt="" class="img-fluid">
                 </div>
-                <button id="navTrigger">
-                    <span class="hamburger"></span>
-                </button>
             </div>
         </header>
 
@@ -28,7 +31,7 @@
             <section class="intro">
 
                 <div class="container">
-                    <div class="text">
+                    <div class="text skewed" data-scroll>
                         <p>cutting-edge AI solutions</p>
 
                         <h2>Wolfpack AI</h2>
@@ -37,7 +40,7 @@
 
                 <div class="wolfpack-screen">
                     <div class="container">
-                        <img src="images/wolfpack.jpg" alt="" class="img-fluid w-100"  data-scroll data-scroll-speed="1">
+                        <img src="images/wolfpack.jpg" alt="" class="img-fluid w-100" data-scroll data-scroll-speed="1">
                     </div>
                 </div>
 
@@ -46,7 +49,7 @@
             <section class="layout-1">
                 <div class="container">
 
-                    <div class="group">
+                    <div class="group skewed" data-scroll>
                         <div class="title-space">
                             <h6>Brief</h6>
                         </div>
@@ -82,7 +85,7 @@
                                 </div>
 
                                 <a href="" class="launch">
-                                    Launch project
+                                    <span>Launch project</span>
                                 </a>
                             </div>
 
@@ -97,20 +100,22 @@
                     <div class="group">
 
                         <div class="image">
-                            <img src="images/even-images/colors.jpg" alt="" class="image"  data-scroll data-scroll-speed="2">
+                            <img src="images/even-images/colors.jpg" class="img-fluid" data-scroll
+                                data-scroll-speed="2">
                         </div>
 
-                        <div class="image">
-                            <img src="images/even-images/fonts.jpg" alt=""  class="image"  data-scroll data-scroll-speed="2">
+                        <div class="image overflow-visible">
+                            <img src="images/even-images/fonts.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
                             <img src="images/even-images/stripes.png" alt="" class="stripes img-fluid">
                         </div>
 
                         <div class="image">
-                            <img src="images/even-images/laptop.jpg" alt=""  class="image"  data-scroll data-scroll-speed="2">
+                            <img src="images/even-images/laptop.jpg" class="img-fluid" data-scroll
+                                data-scroll-speed="2">
                         </div>
 
                         <div class="image">
-                            <img src="images/even-images/web.jpg" alt=""  class="image"  data-scroll data-scroll-speed="2">
+                            <img src="images/even-images/web.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
                         </div>
 
                     </div>
@@ -124,7 +129,7 @@
                     <div class="group">
                         <div class="title-space">
                         </div>
-                        <div class="content-space">
+                        <div class="content-space skewed" data-scroll>
 
                             <h3>Interactive <br>
                                 Design</h3>
@@ -146,7 +151,7 @@
                 </div>
             </section>
 
-            <section class="screens" >
+            <section class="screens">
                 <div class="container">
                     <div class="row">
                         <div class="screen">
@@ -164,7 +169,8 @@
                     </div>
                 </div>
 
-                <img src="images/screens/stripes.png" alt="" class="stripes img-fluid"  data-scroll data-scroll-speed="8" data-scroll-direction="horizontal">
+                <img src="images/screens/stripes.png" alt="" class="stripes img-fluid" data-scroll data-scroll-speed="8"
+                    data-scroll-direction="horizontal">
             </section>
 
             <section class="layout-1">
@@ -175,7 +181,7 @@
                         <div class="title-space">
                         </div>
 
-                        <div class="content-space">
+                        <div class="content-space skewed" data-scroll>
 
                             <h2>Website dedicated <br>
                                 to sales
@@ -184,12 +190,13 @@
                         </div>
                     </div>
 
-                </div>
-                
+                    <div class="image parallax">
+                        <img src="images/sales.jpg" alt="" class="img-fluid w-100" data-scroll data-scroll-speed="3">
+                    </div>
 
-                <div class="image parallax">
-                    <img src="images/sales.jpg" alt="" class="img-fluid w-100"   data-scroll data-scroll-speed="3">
                 </div>
+
+
             </section>
 
             <section class="layout-2">
@@ -197,14 +204,14 @@
 
                     <div class="group">
 
-                        <div class="title-space">
+                        <div class="title-space skewed" data-scroll>
                             <h4>ATOL Sigma Online <br>
                                 Cash Registers: trade, <br>
                                 services, food
                             </h4>
                         </div>
 
-                        <div class="content-space">
+                        <div class="content-space skewed" data-scroll>
 
                             <p>
                                 There are many variations of passages of<br>
@@ -219,16 +226,16 @@
 
                         <div class="group">
                             <div class="image">
-                                <img src="images/even-images/phone.jpg" alt=""  data-scroll data-scroll-speed="2">
+                                <img src="images/even-images/phone.jpg" alt="" data-scroll data-scroll-speed="2">
                             </div>
                             <div class="image">
-                                <img src="images/even-images/tab.jpg" alt=""  data-scroll data-scroll-speed="2">
+                                <img src="images/even-images/tab.jpg" alt="" data-scroll data-scroll-speed="2">
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="fullwidth-big-title">
+                    <div class="fullwidth-big-title skewed" data-scroll>
                         <h2>Aesthetics, <br>
                             convenience, sales</h2>
                     </div>
@@ -240,11 +247,12 @@
 
                 <div class="wolfpack-screen">
                     <div class="container">
-                        <img src="images/wolfpack_reverse.jpg" alt="" class="img-fluid"   data-scroll data-scroll-speed="-8" data-scroll-direction="horizontal">
+                        <img src="images/wolfpack_reverse.jpg" alt="" class="img-fluid" data-scroll
+                            data-scroll-speed="-8" data-scroll-direction="horizontal">
                     </div>
                 </div>
 
-                <div class="random-screens layout-2">
+                <div class="random-screens layout-2" data-scroll>
 
                     <div class="container">
                         <div class="screens-grid">
@@ -282,12 +290,12 @@
 
         </main>
 
-        <footer>
+        <footer id="sitefooter">
             <section class="contact">
                 <div class="container">
                     <div class="row">
 
-                        <div class="left-wrap">
+                        <div class="left-wrap skewed" data-scroll>
                             <h2>Have an idea? </h2>
                             <p class="h5  font-weight-light">Tell us About it</p>
                             <p>There are many variations of passages of The <br>
@@ -306,6 +314,9 @@
         </footer>
     </div>
 
+    <button id="navTrigger">
+        <span class="hamburger"></span>
+    </button>
 
     <script src="js/locomotive-scroll.min.js"></script>
     <script src="js/jquery.min.js"></script>

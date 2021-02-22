@@ -38,28 +38,56 @@
     }
 }
 
+
+#navTrigger {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    height: 40px;
+    width: 37px;
+    position: fixed;
+    top: 3rem;
+    right: var(--containerOffset);
+    z-index: 2;
+
+
+    &:hover {
+        .hamburger {
+            background: $white;
+
+            &::before,
+            &::after {
+                background: $white;
+            }
+
+            &.change {
+                background: transparent;
+            }
+        }
+    }
+}
+
 .siteHeader {
+
+    .logo {
+        img {
+            max-width: 23.8rem;
+        }
+    }
 
     .header-container {
         display: flex;
         align-items: center;
         padding-top: 2rem;
         padding-bottom: 2rem;
-
-        #navTrigger {
-            margin-left: auto;
-            background: transparent;
-            border: none;
-            height: 40px;
-            width: 37px;
-        }
     }
 }
 
 .wolfpack-screen {
     background: $wolfpack_bg;
     padding: 5.5rem 3rem;
-    @include media-breakpoint-up(lg){
+
+    @include media-breakpoint-up(lg) {
         padding: 12.5rem 0;
     }
 
@@ -80,7 +108,7 @@ footer {
         .btn-arrow {
             align-self: flex-start;
             font-size: $font-size-base;
-            font-weight: $headings-font-weight;
+            font-weight: $h1-font-weight;
             color: $white;
             margin: 8rem 0 0;
 

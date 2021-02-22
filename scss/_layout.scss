@@ -141,6 +141,9 @@
     width: 100%;
 }
 
+.overflow-visible {
+    overflow: visible !important;
+}
 
 @include media-breakpoint-up(md) {
     .d-md-none {
@@ -180,6 +183,7 @@
     .image {
         background-size: contain;
         position: relative;
+        overflow: hidden;
 
         @include media-breakpoint-up(lg) {
             &::after {
@@ -189,7 +193,7 @@
                 transform: translateY(-50%);
                 left: 0;
                 width: 100%;
-                height: 112%;
+                height: calc(100% + 18rem);
                 border: 0px solid #fff;
                 border-width: 10rem 0;
                 box-sizing: border-box;
@@ -200,6 +204,7 @@
         img {
             width: 100%;
             // opacity: 0;
+            object-fit: contain;
         }
 
         margin-bottom: 6.4%;
@@ -210,7 +215,7 @@
 
             &:nth-child(odd) {
                 margin-right: 3.5%;
-                margin-top: -6.4%;
+                margin-top: -9rem;
             }
 
             &:nth-child(even) {
@@ -273,12 +278,18 @@
             }
 
             .links {
-                margin-right: auto;
+                width: 100%;
+                margin: 0 0 7.5rem;
 
+                @include media-breakpoint-up(lg) {
+                    width: auto;
+                    margin: 0 auto 0 0;
+                }
                 a {
                     display: block;
-                    &:hover{
-                        transform: translate3d(-2px,2px,2px) scale(1.01);
+
+                    &:hover {
+                        transform: translate3d(-2px, 2px, 2px) scale(1.01);
                         text-shadow: 0px 0px 0px
                     }
                 }
@@ -293,9 +304,6 @@
             }
         }
 
-        &+.image {
-            margin-top: 5rem;
-        }
     }
 
 }
@@ -373,12 +381,23 @@
         @extend .row;
         padding: 0 calc(#{$grid-gutter-width}/2);
 
+        &+.even-images-group {
+            margin-top: 11rem;
+        }
+
         .title-space {
             width: 100%;
             align-self: flex-start;
             padding-bottom: 3rem;
+        }
 
-            @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(lg) {
+
+            &+.even-images-group {
+                margin-top: 0;
+            }
+
+            .title-space {
                 width: calc(50% - calc(#{$grid-gutter-width}/2));
             }
         }
@@ -412,6 +431,8 @@
 }
 
 .image.parallax {
+    overflow: hidden;
+
     @include media-breakpoint-up(lg) {
         position: relative;
 
