@@ -1,7 +1,7 @@
 $(document).ready(function () {
     navMenu();
     mouseCursor();
-    $(window).load(function(){
+    $(window).load(function () {
         mouseCursor();
     })
 });
@@ -24,10 +24,9 @@ function mouseCursor() {
     $(document).mousemove(function (event) {
         xMousePos = event.pageX;
         yMousePos = event.pageY;
-        // window.status = "x = " + xMousePos + " y = " + yMousePos;
+
         $(".mouseCursor").css({
-            top: (yMousePos - $(window).scrollTop()) + 'px',
-            left: xMousePos + 'px'
+            transform: "translate(" + xMousePos + "px," + (yMousePos - $(window).scrollTop()) + "px)"
         });
     })
 
@@ -42,16 +41,15 @@ function mouseCursor() {
             lastScrolledTop = $(document).scrollTop();
             yMousePos += lastScrolledTop;
         }
-        // window.status = "x = " + xMousePos + " y = " + yMousePos;
+        
         $(".mouseCursor").css({
-            top: (yMousePos - $(window).scrollTop()) + 'px',
-            left: xMousePos + 'px'
-        })
+            transform: "translate(" + xMousePos + "px," + (yMousePos - $(window).scrollTop()) + "px)"
+        });
 
     });
 
     //scroll
-    
+
     (function () {
         var scroll = new LocomotiveScroll();
     })();

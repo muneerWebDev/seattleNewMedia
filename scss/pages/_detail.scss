@@ -98,6 +98,7 @@
         background: $white;
         padding: 10rem 0;
         
+        .btn{font-weight: $font-weight-medium;}
         @include media-breakpoint-up(lg) {
             padding: 18rem 0;
         }

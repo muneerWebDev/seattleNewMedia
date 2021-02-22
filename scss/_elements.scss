@@ -62,7 +62,7 @@ h3,
     font-size: $h3-font-size;
     font-weight: $font-weight-base;
     line-height: $h3-line-height;
-
+    color: $black;
     &+p {
         margin-top: 4rem;
     }
@@ -90,11 +90,13 @@ p,
 a {
     font-size: $p-font-size;
     line-height: $p-line-height;
+    color: $black;
 }
 
 a {
     color: $wolfpack_bg;
     font-weight: $h1-font-weight;
+    transition: .3s;
 }
 
 
@@ -110,6 +112,16 @@ a {
     position: relative;
     color: $primary;
     min-height: 5.8rem;
+
+    span{
+        transition: .3s;
+    }
+
+    &:hover{
+        span{
+            transform: skew(-10deg);
+        }
+    }
 
     &::after {
         content: '';
@@ -148,6 +160,7 @@ main{
     padding-right: 5rem;
     @extend .p;
     font-weight: $headings-font-weight;
+    transition: .3s ;
 
     &::after {
         content: '';
@@ -189,6 +202,8 @@ button {
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%);
     pointer-events: none;
+    top: 0;
+    left: 0;
 }
 .nicescroll-cursors {
     margin-right: 2px;
