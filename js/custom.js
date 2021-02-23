@@ -5,6 +5,7 @@ $(document).ready(function () {
     $(window).load(function () {
         mouseCursor();
     })
+    setTimeout(function(){  mouseCursor(); }, 1000);
 });
 
 
