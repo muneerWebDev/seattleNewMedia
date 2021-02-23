@@ -2,10 +2,9 @@ $(document).ready(function () {
     getDynamicDimensions();
     navMenu();
     mouseCursor();
-    $(window).load(function () {
+    $(window).on('load', function(){
         mouseCursor();
     })
-    setTimeout(function(){  mouseCursor(); }, 1000);
 });
 
 
