@@ -433,6 +433,10 @@
 .image.parallax {
     overflow: hidden;
 
+    img{
+        object-fit: contain;
+    }
+
     @include media-breakpoint-up(lg) {
         position: relative;
 
@@ -443,7 +447,7 @@
             transform: translateY(-50%);
             left: 0;
             width: 100%;
-            height: 100%;
+            height: calc(100% + 10rem);
             border: 0px solid #fff;
             border-width: 10rem 0;
             box-sizing: border-box;
