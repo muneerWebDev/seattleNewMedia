@@ -34,6 +34,16 @@ body {
     height: 100vh;
     overflow: hidden;
     overflow-y: auto;
+    &:not(.loaded)>*{
+        transition: color .3s;
+        opacity: 0;
+    }
+
+    &.loaded{
+        &>*{
+            opacity: 1;
+        }
+    }
 }
 
 .base-font-size {

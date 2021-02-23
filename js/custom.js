@@ -1,9 +1,14 @@
 $(document).ready(function () {
-    getDynamicDimensions();
-    navMenu();
-    mouseCursor();
-    $(window).on('load', function(){
-        mouseCursor();
+
+    $(window).on('load', function () {
+       
+
+        setTimeout(function () {
+            getDynamicDimensions();
+            navMenu();
+            mouseCursor();
+            $("body").addClass("loaded");
+        }, 300);
     })
 });
 
@@ -29,92 +34,92 @@ function getDynamicDimensions() {
 function navMenu() {
 
     // if ($(window).width() > 1279) {
-        $("#navTrigger").click(function () {
-            $(this).find(".hamburger").toggleClass("change").parents("body").toggleClass("navbarOpen");
-        })
+    $("#navTrigger").click(function () {
+        $(this).find(".hamburger").toggleClass("change").parents("body").toggleClass("navbarOpen");
+    })
 
-        $("#navTrigger").mouseenter(function () {
-            $(".mouseCursor").addClass("onNavButton");
-        });
+    $("#navTrigger").mouseenter(function () {
+        $(".mouseCursor").addClass("onNavButton");
+    });
 
-        $("#navTrigger").mouseleave(function () {
-            $(".mouseCursor").removeClass("onNavButton");
-        });
+    $("#navTrigger").mouseleave(function () {
+        $(".mouseCursor").removeClass("onNavButton");
+    });
     // }
 }
 
 function mouseCursor() {
     // if ($(window).width() > 1279) {
-        $("body").append("<span class='mouseCursor'></span>");
+    $("body").append("<span class='mouseCursor'></span>");
 
-        var xMousePos = 0;
-        var yMousePos = 0;
-        var lastScrolledLeft = 0;
-        var lastScrolledTop = 0;
+    var xMousePos = 0;
+    var yMousePos = 0;
+    var lastScrolledLeft = 0;
+    var lastScrolledTop = 0;
 
-        $(document).mousemove(function (event) {
-            xMousePos = event.pageX;
-            yMousePos = event.pageY;
+    $(document).mousemove(function (event) {
+        xMousePos = event.pageX;
+        yMousePos = event.pageY;
 
-            $(".mouseCursor").removeClass("inactive");
-            $(".mouseCursor").css({
-                transform: "translate(" + xMousePos + "px," + (yMousePos - $(window).scrollTop()) + "px)"
-            });
-        })
+        $(".mouseCursor").removeClass("inactive");
+        $(".mouseCursor").css({
+            transform: "translate(" + xMousePos + "px," + (yMousePos - $(window).scrollTop()) + "px)"
+        });
+    })
 
-        $(window).scroll(function (event) {
-            if (lastScrolledLeft != $(document).scrollLeft()) {
-                xMousePos -= lastScrolledLeft;
-                lastScrolledLeft = $(document).scrollLeft();
-                xMousePos += lastScrolledLeft;
-            }
-            if (lastScrolledTop != $(document).scrollTop()) {
-                yMousePos -= lastScrolledTop;
-                lastScrolledTop = $(document).scrollTop();
-                yMousePos += lastScrolledTop;
-            }
+    $(window).scroll(function (event) {
+        if (lastScrolledLeft != $(document).scrollLeft()) {
+            xMousePos -= lastScrolledLeft;
+            lastScrolledLeft = $(document).scrollLeft();
+            xMousePos += lastScrolledLeft;
+        }
+        if (lastScrolledTop != $(document).scrollTop()) {
+            yMousePos -= lastScrolledTop;
+            lastScrolledTop = $(document).scrollTop();
+            yMousePos += lastScrolledTop;
+        }
 
-            $(".mouseCursor").removeClass("inactive");
+        $(".mouseCursor").removeClass("inactive");
 
-            $(".mouseCursor").css({
-                transform: "translate(" + xMousePos + "px," + (yMousePos - $(window).scrollTop()) + "px)"
-            });
-
+        $(".mouseCursor").css({
+            transform: "translate(" + xMousePos + "px," + (yMousePos - $(window).scrollTop()) + "px)"
         });
 
-        $(document).mouseout(function () {
-            $(".mouseCursor").addClass("inactive");
-        });
+    });
+
+    $(document).mouseout(function () {
+        $(".mouseCursor").addClass("inactive");
+    });
 
 
-        //next case button cursor contol
-        $("#sitefooter").mouseenter(function () {
-            $(".mouseCursor").addClass("onSiteFooter");
-        });
+    //next case button cursor contol
+    $("#sitefooter").mouseenter(function () {
+        $(".mouseCursor").addClass("onSiteFooter");
+    });
 
-        $("#sitefooter").mouseleave(function () {
-            $(".mouseCursor").removeClass("onSiteFooter");
-        });
+    $("#sitefooter").mouseleave(function () {
+        $(".mouseCursor").removeClass("onSiteFooter");
+    });
 
-        //footer cursor contol
-        $(".next-case .btn").mouseenter(function () {
-            $(".mouseCursor").addClass("onNext-case");
-        });
+    //footer cursor contol
+    $(".next-case .btn").mouseenter(function () {
+        $(".mouseCursor").addClass("onNext-case");
+    });
 
-        $(".next-case .btn").mouseleave(function () {
-            $(".mouseCursor").removeClass("onNext-case");
-        });
+    $(".next-case .btn").mouseleave(function () {
+        $(".mouseCursor").removeClass("onNext-case");
+    });
 
 
-        //scroll
+    //scroll
 
-        (function () {
-            var scroll = new LocomotiveScroll();
-        })();
-        const locoScroll = new LocomotiveScroll({
-            el: document.querySelector(".page-wrap"),
-            smooth: true,
-            getDirection: true
-        });
+    (function () {
+        var scroll = new LocomotiveScroll();
+    })();
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".page-wrap"),
+        smooth: true,
+        getDirection: true
+    });
     // }
 }
