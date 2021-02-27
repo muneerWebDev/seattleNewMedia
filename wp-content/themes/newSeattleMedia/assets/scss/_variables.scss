@@ -1,0 +1,84 @@
+//fonts
+$poppins: 'Poppins',
+sans-serif;
+
+//font family
+$font-family-base: $poppins;
+$font-size-base: 2rem;
+$font-weight-base: 300;
+
+
+//colors
+$orange: #FF8124;
+$white: white;
+
+$scrollbar-track-gray:gba(222, 222, 222, .75);
+$gray-200: #EFEFEF;
+$gray-300: #E3E3E3;
+$gray-400: #CACACC;
+$gray-500: #B2B2B2;
+$gray-600: #92959C;
+$gray-700: #363636;
+$gray-800: #22252B;
+$black: #000;
+$primary : #3B3B3B;
+$body-color: $primary;
+$dark: #040612;
+$purple-dark: #450a6a;
+$purple: rgb(144 87 197);
+$btn-box-shadow: 0 0rem 2rem 0px rgba(69, 10, 106, 0.251);
+$wolfpack_bg: #932734;
+$wolfpack_bg_box-shadow: 0 3.1rem 9.9rem #6A1C26;
+
+//font sizes
+$h1-font-size: 9rem;
+$h2-font-size: 8rem;
+$h3-font-size: 4.9rem;
+$h4-font-size: 4rem;
+$h5-font-size: 3rem;
+$h6-font-size: 2.4rem;
+$p-font-size: 2.6rem;
+
+$h2-line-height: 10rem;
+$h3-line-height: 6.1rem;
+$h4-line-height: 4.8rem;
+$p-line-height: 4.4rem;
+//font weight
+$font-weight-lighter: 100;
+$font-weight-light: 200;
+$font-weight-medium: 400;
+$headings-font-weight: 700;
+$h1-font-weight: 500;
+
+//grid
+$breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1535px,
+  xxxxl: 1636px,
+  extend: 1920px);
+
+$grid-gutter-width: 4rem;
+$container-max-width:calc(72.3% + #{$grid-gutter-width});
+$header_container-max-width: calc(80.5% + #{$grid-gutter-width});
+
+
+.font-weight-light{
+  font-weight: $font-weight-light
+}
+
+.font-weight-base {
+  font-weight: $font-weight-base;
+}
+
+.headings-font-weight {
+  font-weight: $headings-font-weight;
+}
+
+
+.h1-font-weight {
+  font-weight: $h1-font-weight;
+}
