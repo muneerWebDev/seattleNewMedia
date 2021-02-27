@@ -1,6 +1,6 @@
 .hamburger {
-    width: 22px;
-    height: 3px;
+    width: 15px;
+    height: 2.5px;
     background: $primary;
     display: block;
     position: relative;
@@ -12,7 +12,7 @@
     &::after {
         content: '';
         position: absolute;
-        width: 37px;
+        width: 27px;
         height: 100%;
         right: 0;
         top: -400%;
@@ -30,12 +30,12 @@
 
         &::before {
             background: $white;
-            transform: rotate(-45deg) translate(-10px, 8px);
+            transform: rotate(-45deg) translate(-11px,11px)
         }
 
         &::after {
             background: $white;
-            transform: rotate(45deg) translate(-8px, -6px);
+            transform: rotate(45deg) translate(-2px,-4px)
         }
     }
 }
@@ -45,8 +45,8 @@
     margin-left: auto;
     background: transparent;
     border: none;
-    height: 40px;
-    width: 37px;
+    height: 4rem;
+    width: 27px;
     right: var(--containerOffset);
 
     @include media-breakpoint-up(lg) {
@@ -73,6 +73,8 @@
     z-index: 2;
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
 
     .header-container {
         display: flex;
@@ -116,7 +118,7 @@
         }
 
         .social {
-            padding: calc(#{$grid-gutter-width / 2});
+            padding: calc(#{var(--gutter) / 2});
             margin: 0 -1rem;
 
             @include media-breakpoint-up(lg) {
@@ -143,7 +145,7 @@
             display: flex;
             flex-direction: column;
             margin: auto 0;
-            padding: 0 calc(#{$grid-gutter-width} / 2);
+            padding: 0 calc(var(--gutter) / 2);
 
             #menu-item-14 {
                 a {
@@ -158,7 +160,7 @@
                 align-items: center;
                 #menu-item-14 {
                     a {
-                        color: $purple-dark;
+                        color: $purple;
                     }
                 }
     
@@ -203,7 +205,7 @@
 
 .wolfpack-screen {
     background: $wolfpack_bg;
-    padding: 5.5rem 3rem;
+    padding: 5.5rem 2.5rem;
 
     @include media-breakpoint-up(lg) {
         padding: 12.5rem 0;

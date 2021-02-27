@@ -104,8 +104,8 @@
 @mixin container() {
     margin-left: auto;
     margin-right: auto;
-    padding-left: calc(#{$grid-gutter-width} / 2);
-    padding-right: calc(#{$grid-gutter-width} / 2);
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
 
     @include media-breakpoint-up(md) {
         max-width: $container-max-width;
@@ -250,6 +250,10 @@
     .group {
         padding-top: 13.5rem;
 
+        &+.group{
+            padding-top: calc(13.5rem/2);
+        }
+
         @extend .row;
 
         .title-space {
@@ -313,12 +317,12 @@
 
     .screens-grid {
         @extend.row;
-        padding: 5.5rem 3rem;
+        padding: 5.5rem 0;
         position: relative;
         margin: -2rem;
 
         @include media-breakpoint-up(lg) {
-            margin: calc(#{$grid-gutter-width} * -1);
+            margin: calc(var(--gutter) * -1);
             padding: 18rem 0 0;
         }
 
@@ -329,7 +333,7 @@
             padding: 2rem;
 
             @include media-breakpoint-up(lg) {
-                padding: $grid-gutter-width;
+                padding: var(--gutter);
             }
 
             img {
@@ -343,11 +347,11 @@
 
             @include media-breakpoint-up(lg) {
 
-                width: calc(53% + #{$grid-gutter-width});
+                width: calc(53% + var(--gutter));
                 align-items: flex-start;
 
                 &:nth-child(2) {
-                    width: calc(47% - #{$grid-gutter-width});
+                    width: calc(47% - var(--gutter));
                 }
 
             }
@@ -373,7 +377,7 @@
 
     .group {
         @extend .row;
-        padding: 0 calc(#{$grid-gutter-width}/2);
+        // padding: 0 calc(var(--gutter)/2);
 
         &+.even-images-group {
             margin-top: 11rem;
@@ -392,7 +396,7 @@
             }
 
             .title-space {
-                width: calc(50% - calc(#{$grid-gutter-width}/2));
+                width: calc(50% - calc(var(--gutter)/2));
             }
         }
 
@@ -400,7 +404,7 @@
             width: 100%;
 
             @include media-breakpoint-up(lg) {
-                width: calc(50% + calc(#{$grid-gutter-width}/2));
+                width: calc(50% + calc(var(--gutter)/2));
             }
         }
     }
@@ -410,14 +414,14 @@
             width: 100%;
 
             @include media-breakpoint-up(sm) {
-                width: calc(50% - calc(#{$grid-gutter-width}/2));
+                width: calc(50% - calc(var(--gutter)/2));
 
                 &:nth-child(odd) {
-                    margin-right: calc(#{$grid-gutter-width}/2);
+                    margin-right: calc(var(--gutter)/2);
                 }
 
                 &:nth-child(even) {
-                    margin-left: calc(#{$grid-gutter-width}/2);
+                    margin-left: calc(var(--gutter)/2);
                 }
             }
         }

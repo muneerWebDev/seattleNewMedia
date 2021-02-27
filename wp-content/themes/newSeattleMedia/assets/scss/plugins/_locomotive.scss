@@ -36,7 +36,7 @@ html.has-scroll-dragging {
   position: absolute;
   right: 0;
   top: 0;
-  width: 18px;
+  width: 10px;
   height: 100%;
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
@@ -73,7 +73,7 @@ html.has-scroll-dragging {
   background-color: $purple;
   border-radius: 10px;
  
-  width: 18px;
+  width: 10px;
   height: 8px; 
 
   cursor: -webkit-grab;

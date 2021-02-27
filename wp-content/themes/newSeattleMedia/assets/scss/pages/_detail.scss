@@ -34,12 +34,12 @@
             overflow: hidden;
 
             .row {
-                margin: calc(calc(#{$grid-gutter-width} / 2) * -1);
+                margin: calc(calc(var(--gutter) / 2) * -1);
             }
 
             .screen {
                 display: flex;
-                padding: calc(#{$grid-gutter-width} / 2);
+                padding: calc(var(--gutter) / 2);
 
                 @include media-breakpoint-up(lg) {
                     width: 50%;
@@ -73,7 +73,6 @@
 
             .wolfpack-screen {
                 background: $gray-700;
-                padding: 5.5rem 3rem;
 
                 @include media-breakpoint-up(lg) {
                     padding: 22.5rem 0;
@@ -115,6 +114,10 @@
                     }
                 }
             }
+        }
+
+        &.single-column-text{
+            
         }
     }
 

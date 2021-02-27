@@ -61,9 +61,8 @@ $breakpoints: (xs: 0,
   xxxxl: 1636px,
   extend: 1920px);
 
-$grid-gutter-width: 4rem;
-$container-max-width:calc(72.3% + #{$grid-gutter-width});
-$header_container-max-width: calc(80.5% + #{$grid-gutter-width});
+$container-max-width:calc(72.3% + var(--gutter));
+$header_container-max-width: calc(80.5% + var(--gutter));
 
 
 .font-weight-light{
