@@ -114,7 +114,7 @@ h6,
 .h6 {
     font-size: $p-font-size;
     font-weight: $h1-font-weight;
-    color: $purple-dark;
+    color: $purple-600;
 }
 
 p,
@@ -132,7 +132,7 @@ a {
     text-decoration: none;
 
     &.link{
-        color: $purple-dark;
+        color: $purple-600;
         font-size: $h6-font-size;
         line-height: inherit;
     }
@@ -147,16 +147,16 @@ a {
 
 .btn-link-primary{
     display: inline-block;
-    background: $purple-dark;
+    background: $purple-600;
     border-radius: 3rem;
     padding: .25rem 4rem;
     font-size: $font-size-base;
     color: $white;
    transition: .3s;
-   border: 2px solid $purple-dark;
+   border: 2px solid $purple-600;
 
    &:hover{
-       background: darken($purple-dark, 5%);
+       background: darken($purple-600, 5%);
        box-shadow: $btn-box-shadow;
    }
 
@@ -192,7 +192,7 @@ a {
         content: '';
         width: 5.7rem;
         height: 5.7rem;
-        background-color: $purple-dark;
+        background-color: $purple-600;
         border-radius: 50%;
         background-image: url(../images/arrow.svg);
         background-position: center center;
@@ -282,7 +282,7 @@ button {
     z-index: 2;
     background: transparent;
     // @include media-breakpoint-up(xl) {
-    //     background: $purple-dark;
+    //     background: $purple-600;
     // }
 
 //     &.inactive {
@@ -366,7 +366,7 @@ button {
     padding: 1rem 0;
     span{
         &.active{
-            color: $purple;
+            color: $purple-500;
         }
     }
 }
