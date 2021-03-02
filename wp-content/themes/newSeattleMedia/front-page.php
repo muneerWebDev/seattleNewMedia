@@ -6,18 +6,6 @@ get_header(); ?>
 
 <main class="detail-page">
 
-    <section class="breadcrumb">
-        <div class="container header-container">
-
-            <!-- <?php
-                    if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-                    }
-                    ?> -->
-
-            <span>Work </span> > <span class="active">WolfPack AI</span>
-        </div>
-    </section>
     <section class="intro">
 
         <div class="container">
@@ -25,8 +13,19 @@ get_header(); ?>
                 <p>cutting-edge AI solutions</p>
 
                 <h2>Wolfpack AI</h2>
+            <div class="breadcrumb">
+
+                <!-- <?php
+                        if (function_exists('yoast_breadcrumb')) {
+                            yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+                        }
+                        ?> -->
+
+                <span>Work </span> > <span class="active">WolfPack AI</span>
+            </div>
             </div>
         </div>
+
 
         <div class="wolfpack-screen">
             <div class="container">
