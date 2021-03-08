@@ -30,12 +30,12 @@
 
         &::before {
             background: $purple-200;
-            transform: rotate(-45deg) translate(-11px,11px)
+            transform: rotate(-45deg) translate(-11px, 11px)
         }
 
         &::after {
             background: $purple-200;
-            transform: rotate(45deg) translate(-2px,-4px)
+            transform: rotate(45deg) translate(-2px, -4px)
         }
     }
 }
@@ -81,6 +81,7 @@
         padding-top: 2rem;
         padding-bottom: 2rem;
         position: relative;
+        z-index: 1;
     }
 
     .logo {
@@ -103,7 +104,7 @@
         transition: .3s;
         background: $purple-600;
         z-index: -1;
-        transform-origin: top;  
+        transform-origin: top;
         transform: scaleY(0);
 
         @include media-breakpoint-up(lg) {
@@ -121,10 +122,6 @@
             padding: calc(#{var(--gutter) / 2});
             margin: 0 -1rem;
 
-            @include media-breakpoint-up(lg) {
-                display: none;
-            }
-
             a {
                 display: inline-block;
                 width: 7rem;
@@ -138,6 +135,10 @@
                 border-radius: 50%;
                 font-size: 3.5rem;
             }
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
         }
 
         .menu {
@@ -147,23 +148,54 @@
             margin: auto 0;
             padding: 0 calc(var(--gutter) / 2);
 
-            #menu-item-14 {
-                a {
-                    color: $purple-200;
-                    opacity: 1; 
+            .menu-item {
+                position: relative;
+
+                &:not(.current-menu-parent, .current-menu-item)>a {
+                    &:hover {
+                        color: $gray-700;
+                    }
+                }
+
+                .sub-menu {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    padding: 0;
+                    list-style: none;
+                    min-width: 19rem;
+                    box-shadow: $btn-box-shadow;
+                    padding: 0;
+                    border-top: 3px solid $purple-500;
+                    transform: translateY(10px);
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: .3s;
+                    background: $white;
+                }
+
+                &:hover {
+                    .sub-menu {
+                        opacity: 1;
+                        transform: none;
+                        pointer-events: all;
+                    }
                 }
             }
+
+            .current-menu-parent,
+            .current-menu-item {
+                &>a {
+                    color: $purple-500;
+                    opacity: 1;
+                }
+            }
+
             @include media-breakpoint-up(lg) {
                 flex-direction: row;
                 margin: 0 -2rem;
                 padding-left: 3rem;
                 align-items: center;
-                #menu-item-14 {
-                    a {
-                        color: $purple-500;
-                    }
-                }
-    
 
             }
 

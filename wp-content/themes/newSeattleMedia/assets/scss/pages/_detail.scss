@@ -1,4 +1,51 @@
-.detail-page {
+.work-listing-page {
+    .intro {
+        background: $purple-700;
+        padding: 14rem 0 0;
+
+        * {
+            color: $white;
+        }
+
+        h2 {
+            margin-bottom: 5rem;
+        }
+
+        p {
+            margin-bottom: 3.5rem;
+        }
+
+        .tabs {
+            margin: 8.5rem 0 4rem;
+        }
+    }
+
+    .even-images-group {
+        padding: 8rem 0 12rem;
+
+        .image {
+            &:nth-child(odd) {
+                margin-top: calc(calc(var(--worksListingIntroHeight) - 13rem)*-1);
+            }
+
+            &::after {
+                display: none;
+            }
+
+            .text {
+                padding: 3rem 0 6rem;
+
+                .title{
+                    margin: 1.5rem 0 .8rem; 
+                }
+            }
+        }
+    }
+
+
+}
+
+.work-detail-page {
 
     section {
         &.intro {
@@ -11,7 +58,7 @@
             }
         }
 
-        &.brief{
+        &.brief {
             @media (max-width: 575px) {
                 // .group{
                 //     &+.group{
@@ -22,7 +69,7 @@
         }
 
         &.screens {
-            padding: 4rem 0;
+            padding: var(--gutter) 0;
 
             @include media-breakpoint-up(lg) {
                 padding: 19rem 0;
@@ -40,6 +87,7 @@
             .screen {
                 display: flex;
                 padding: calc(var(--gutter) / 2);
+                align-items: flex-start;
 
                 @include media-breakpoint-up(lg) {
                     width: 50%;
@@ -116,9 +164,7 @@
             }
         }
 
-        &.single-column-text{
-            
-        }
+        &.single-column-text {}
     }
 
     .next-case {

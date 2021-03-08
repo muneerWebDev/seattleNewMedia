@@ -1,15 +1,17 @@
+var scroll;
+var locoScroll;
 jQuery(document).ready(function () {
 
     jQuery(window).on('load', function () {
-       
-
         setTimeout(function () {
             getDynamicDimensions();
             navMenu();
             mouseCursor();
             jQuery("body").addClass("loaded");
+            dynamicTabs();
         }, 300);
     })
+
 });
 
 
@@ -17,11 +19,14 @@ function getDynamicDimensions() {
     //getting values
     var containerOffset = jQuery(".container").offset().left;
     var siteHeaderHeight = jQuery(".siteHeader").innerHeight();
-
+    var siteFooterHeight = jQuery("#sitefooter").innerHeight();
+    var worksListingIntroHeight = jQuery(".work-listing-page .intro .column").innerHeight();
     //setting values
     jQuery("body").css({
         "--containerOffset": containerOffset + 'px',
-        "--navbarHeight": siteHeaderHeight + 'px'
+        "--navbarHeight": siteHeaderHeight + 'px',
+        "--siteFooterHeight": siteFooterHeight + 'px',
+        "--worksListingIntroHeight": worksListingIntroHeight + 'px'
     });
 
     //change values on resize
@@ -114,12 +119,53 @@ function mouseCursor() {
     //scroll
 
     (function () {
-        var scroll = new LocomotiveScroll();
+        scroll = new LocomotiveScroll();
     })();
-    const locoScroll = new LocomotiveScroll({
+    locoScroll = new LocomotiveScroll({
         el: document.querySelector(".page-wrap"),
         smooth: true,
         getDirection: true
     });
     // }
+}
+
+//tabFilters
+var tabTemp;
+var firstClick = false;
+
+function dynamicTabs() {
+    jQuery(".tabs .tab-item").click(function () {
+        var tabTarget = jQuery(this).attr("tabTarget");
+        var tabGroup = jQuery(this).attr("tabGroup");
+
+        //tab buttons toggle
+        jQuery("[tabTarget|='" + tabTarget + "'").removeClass("active");
+        jQuery(this).addClass("active");
+
+        //storing tab contents to variable
+        if (!firstClick) {
+            tabTemp = jQuery("[tabContent|='" + tabTarget + "']").clone();
+            firstClick = true;
+        }
+        jQuery("[tabContentContainer|='" + tabTarget + "-container'").html("");
+
+        //filtering contents
+        if (tabGroup == 'all') {
+
+            jQuery(tabTemp).each(function (i, e) {
+                jQuery(e).appendTo("[tabContentContainer|='" + tabTarget + "-container'");
+            })
+
+        } else {
+            jQuery(tabTemp).each(function (i, e) {
+                if (jQuery(e).attr("tabGroup") == tabGroup) {
+                    jQuery(e).appendTo("[tabContentContainer|='" + tabTarget + "-container'");
+                }
+            })
+
+        }
+
+        //fixing imges parallax issue after filtering by faking a window resize
+        window.dispatchEvent(new Event('resize'));
+    });
 }
