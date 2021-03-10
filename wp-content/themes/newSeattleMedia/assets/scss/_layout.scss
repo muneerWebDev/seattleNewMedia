@@ -145,6 +145,10 @@
     overflow: visible !important;
 }
 
+.pb-0{
+    padding-bottom: 0 !important;
+}
+
 @include media-breakpoint-up(md) {
     .d-md-none {
         display: none;

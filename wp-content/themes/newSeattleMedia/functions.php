@@ -16,3 +16,4 @@ add_action('wp_enqueue_scripts', 'theme_assets');
 
 //custom wordpress registrations
 add_theme_support( 'menus' );
+add_theme_support( 'title-tag' );

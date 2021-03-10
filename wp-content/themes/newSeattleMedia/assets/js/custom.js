@@ -8,7 +8,7 @@ jQuery(document).ready(function () {
             navMenu();
             mouseCursor();
             jQuery("body").addClass("loaded");
-            dynamicTabs();
+            tabFilters();
         }, 300);
     })
 
@@ -18,12 +18,14 @@ jQuery(document).ready(function () {
 function getDynamicDimensions() {
     //getting values
     var containerOffset = jQuery(".container").offset().left;
+    var headerContainerOffset = jQuery(".header-container").offset().left;
     var siteHeaderHeight = jQuery(".siteHeader").innerHeight();
     var siteFooterHeight = jQuery("#sitefooter").innerHeight();
     var worksListingIntroHeight = jQuery(".work-listing-page .intro .column").innerHeight();
     //setting values
     jQuery("body").css({
         "--containerOffset": containerOffset + 'px',
+        "--headerContainerOffset": headerContainerOffset + 'px',
         "--navbarHeight": siteHeaderHeight + 'px',
         "--siteFooterHeight": siteFooterHeight + 'px',
         "--worksListingIntroHeight": worksListingIntroHeight + 'px'
@@ -133,8 +135,10 @@ function mouseCursor() {
 var tabTemp;
 var firstClick = false;
 
-function dynamicTabs() {
+function tabFilters() {
     jQuery(".tabs .tab-item").click(function () {
+
+
         var tabTarget = jQuery(this).attr("tabTarget");
         var tabGroup = jQuery(this).attr("tabGroup");
 
@@ -146,6 +150,7 @@ function dynamicTabs() {
         if (!firstClick) {
             tabTemp = jQuery("[tabContent|='" + tabTarget + "']").clone();
             firstClick = true;
+            console.log("first");
         }
         jQuery("[tabContentContainer|='" + tabTarget + "-container'").html("");
 

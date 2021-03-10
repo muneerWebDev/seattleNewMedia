@@ -1,12 +1,12 @@
 <?php
 /*
- * Template Name: Work Detail Page
+ * Template Name: Clubhouse
  * description: >-
   Page template without sidebar
  */
 
 get_header(); ?>
- 
+
 
 
 <main class="work-detail-page">
@@ -15,9 +15,9 @@ get_header(); ?>
 
         <div class="container">
             <div class="text skewed" data-scroll>
-                <p>cutting-edge AI solutions</p>
+                <p>Mobile mini golf</p>
 
-                <h2>Wolfpack AI</h2>
+                <h2>Clubhouse</h2>
                 <div class="breadcrumb">
 
                     <!-- <?php
@@ -29,16 +29,13 @@ get_header(); ?>
                     <span>Work </span> > <span class="active">WolfPack AI</span>
                 </div>
             </div>
-        </div>
 
-
-        <div class="wolfpack-screen">
-            <div class="container">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/wolfpack.jpg" class="img-fluid w-100" data-scroll data-scroll-speed="1">
+            <div class="image parallax" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/abstract.jpg);">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/home.png" class="img-fluid w-100" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
             </div>
-        </div>
 
     </section>
+
 
     <section class="layout-1 brief">
         <div class="container">
@@ -49,17 +46,7 @@ get_header(); ?>
                 </div>
                 <div class="content-space">
                     <p>
-                        Crazy golf hire by Clubhouse Mobile Mini Golf is the ultimate centre piece for any
-                        corporate
-                        event.
-                        With a range of branding options to keep the course on-brand, whether you are hosting a
-                        team
-                        bonding
-                        session, celebrating a holiday party or launching a new product, our course is sure to
-                        impress.
-                        Our
-                        in-house event teams hold decades of experience in event planning - let us handle the
-                        details.
+                        Crazy golf hire by Clubhouse Mobile Mini Golf is the ultimate centre piece for any corporate event. With a range of branding options to keep the course on-brand, whether you are hosting a team bonding session, celebrating a holiday party or launching a new product, our course is sure to impress. Our in-house event teams hold decades of experience in event planning - let us handle the details.
                     </p>
                 </div>
             </div>
@@ -103,20 +90,19 @@ get_header(); ?>
             <div class="group">
 
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/colors.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
-                </div>
-
-                <div class="image overflow-visible">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/fonts.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/stripes.png" class="stripes img-fluid">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/colors.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
                 </div>
 
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/laptop.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/fonts.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
                 </div>
 
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/web.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/pc.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
+                </div>
+
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/web.jpg" class="img-fluid" data-scroll data-scroll-speed="2">
                 </div>
 
             </div>
@@ -151,25 +137,9 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="screens">
-        <div class="container">
-            <div class="row">
-                <div class="screen">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/screen1.jpg" class="img-fluid w-100">
-                </div>
-                <div class="screen">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/screen2.jpg" class="img-fluid w-100">
-                </div>
-                <div class="screen">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/screen3.jpg" class="img-fluid w-100">
-                </div>
-                <div class="screen">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/screen4.jpg" class="img-fluid w-100">
-                </div>
-            </div>
-        </div>
-
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/stripes.png" class="stripes img-fluid" data-scroll data-scroll-speed="8" data-scroll-direction="horizontal">
+    <section class="text-center">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/multi-cards.jpg" class="img-fluid"data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/responsive.jpg" class="img-fluid w-100">
     </section>
 
     <section class="layout-1">
@@ -190,7 +160,7 @@ get_header(); ?>
             </div>
 
             <div class="image parallax">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/sales.jpg" class="img-fluid w-100" data-scroll data-scroll-speed="3">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/clubhousesales.jpg" class="img-fluid w-100" data-scroll data-scroll-speed="3">
             </div>
 
         </div>
@@ -225,10 +195,10 @@ get_header(); ?>
 
                 <div class="group">
                     <div class="image">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/phone.jpg" data-scroll data-scroll-speed="2">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/phone.jpg" data-scroll data-scroll-speed="2">
                     </div>
                     <div class="image">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/even-images/tab.jpg" data-scroll data-scroll-speed="2">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/tab.jpg" data-scroll data-scroll-speed="2">
                     </div>
                 </div>
 
@@ -242,37 +212,37 @@ get_header(); ?>
     </section>
 
 
-    <section class="wolfpack-featured">
+    <section class="featured-sec">
 
-        <div class="wolfpack-screen">
+        <div class="featured-screen clubhouse-gradient_bg">
             <div class="container">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/wolfpack_reverse.jpg" class="img-fluid" data-scroll data-scroll-speed="-8" data-scroll-direction="horizontal">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/club_reverse.jpg" class="img-fluid" data-scroll data-scroll-speed="-8" data-scroll-direction="horizontal">
             </div>
         </div>
 
-        <div class="random-screens layout-2" data-scroll>
+        <div class="random-screens layout-2 clubhouse-light-bg" data-scroll>
 
             <div class="container">
                 <div class="screens-grid">
 
                     <div class="column">
                         <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/wolfpack_1.jpg">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/screens/screen-1.jpg">
                         </div>
                         <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/wolfpack_3.jpg">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/screens/screen-2.jpg">
                         </div>
                         <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/wolfpack_4.jpg">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/screens/screen-4.jpg">
                         </div>
                     </div>
 
                     <div class="column">
                         <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/wolfpack_2.jpg">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/screens/screen-2.jpg">
                         </div>
                         <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/screens/wolfpack_5.jpg">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/screens/screen-5.jpg">
                         </div>
                     </div>
                 </div>
