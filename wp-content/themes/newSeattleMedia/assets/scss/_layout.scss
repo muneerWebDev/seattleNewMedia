@@ -251,6 +251,14 @@
 
 .fullwidth-big-title {
     padding: 9rem 0 1rem;
+
+    p{
+        margin-top: 2rem;
+    }
+
+    h2+div{
+        margin-top: 3rem;
+    }
 }
 
 .layout-1 {
@@ -287,6 +295,10 @@
 
         .content-space {
             width: 100%;
+
+            p+p{
+                margin-top: 3rem;
+            }
 
             @include media-breakpoint-up(lg) {
                 width: 75%;
@@ -414,6 +426,9 @@
 
         .content-space {
             width: 100%;
+            p+p{
+                margin-top: 3rem;
+            }
 
             @include media-breakpoint-up(lg) {
                 width: calc(50% + calc(var(--gutter)/2));
@@ -449,6 +464,19 @@
 
         @include media-breakpoint-up(lg) {
             width: 50%;
+        }
+    }
+}
+
+.three-column-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>.column {
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: 33.33%;
         }
     }
 }

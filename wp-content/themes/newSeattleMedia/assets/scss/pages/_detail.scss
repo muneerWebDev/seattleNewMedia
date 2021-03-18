@@ -1,7 +1,52 @@
 .work-listing-page {
+    @include media-breakpoint-up(md) {
+        padding-bottom: 20rem;
+    }
+
+    p {
+        font-size: $p-small-font-size;
+        line-height: $p-small-line-height;
+
+        &.desc {
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    .categ {
+        font-size: $p-small-font-size;
+        letter-spacing: .1rem;
+        word-spacing: .2rem;
+        line-height: $p-small-line-height;
+    }
+
+    .h4 {
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+    }
+
+    *:not(.h6) {
+        color: $body-color;
+        transition: .3s;
+    }
+
+    // for ios
+    @supports (-webkit-touch-callout: none) {
+
+        p,
+        .categ {
+            line-height: calc(#{$p-small-line-height} - 1.5rem);
+        }
+    }
+
     .intro {
         background: $purple-700;
         padding: 14rem 0 0;
+        margin-bottom: calc(calc(var(--worksListingIntroHeight) - 33rem)*-1);
+
+        @include media-breakpoint-down(md) {
+            padding-top: 6rem;
+            margin-bottom: 0;
+        }
 
         * {
             color: $white;
@@ -23,21 +68,86 @@
     .even-images-group {
         padding: 8rem 0 12rem;
 
-        .image {
-            &:nth-child(odd) {
-                margin-top: calc(calc(var(--worksListingIntroHeight) - 13rem)*-1);
+        @include media-breakpoint-down(md) {
+            padding-bottom: 8rem;
+        }
+    
+        .group {
+            display: block;
+            pointer-events: none;
+
+            @include media-breakpoint-up(md) {
+                margin-top: calc(calc(var(--worksListingIntroHeight) - 32rem)*-1);
             }
 
-            &::after {
-                display: none;
-            }
+            .image {
+                margin-top: 0;
+                display: inline-block;
+                pointer-events: all;
 
-            .text {
-                padding: 3rem 0 6rem;
+                @include media-breakpoint-up(md) {
+                    img {
+                        object-fit: cover;
+                    }
 
-                .title {
-                    margin: 1.5rem 0 .8rem;
+                    &:nth-child(even) {
+                        margin-bottom: calc(calc(var(--worksListingIntroHeight) - 23rem)*-1);
+
+                        .img-wrap {
+                            height: 54.8rem;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        margin-bottom: 2rem;
+
+                        .img-wrap {
+                            height: 65.4rem;
+                        }
+                    }
                 }
+
+                .img-wrap {
+                    position: relative;
+                    display: flex;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: transparentize($purple-600, .7);
+                        opacity: 0;
+                        transition: .3s;
+                        pointer-events: none;
+                    }
+                }
+
+                &:hover .img-wrap:after {
+                    opacity: 1;
+                }
+
+
+                &::after {
+                    display: none;
+                }
+
+                .text {
+                    padding: 3rem 0 6rem;
+
+                    .title {
+                        margin: 1.5rem 0 .8rem;
+                    }
+                }
+            }
+        }
+
+        a:hover {
+
+            *:not(p) {
+                color: $purple-600;
             }
         }
     }
@@ -61,7 +171,7 @@
                     margin-left: 8%;
                 }
             }
-            
+
             .image.parallax:after {
                 display: none;
             }
@@ -84,7 +194,7 @@
                 padding: 19rem 0;
             }
 
-            background: $gray-600;
+            background: $gray-300;
             position: relative;
             max-width: 100vw;
             overflow: hidden;
@@ -129,9 +239,9 @@
             }
 
             .featured-screen {
-                background: $gray-700;
+                background: $gray-400;
 
-                &.clubhouse-gradient_bg{
+                &.clubhouse-gradient_bg {
                     background: $clubhouse_gradient_bg;
                 }
 
@@ -145,7 +255,7 @@
             }
 
             .random-screens {
-                background: transparentize($gray-600, .95);
+                background: transparentize($gray-300, .95);
                 position: relative;
                 z-index: -1;
 
@@ -169,10 +279,11 @@
                         display: block;
                     }
                 }
-                
-                &.clubhouse-light-bg{
+
+                &.clubhouse-light-bg {
                     background: $clubhouse_light;
-                    &::after{
+
+                    &::after {
                         display: none;
                     }
                 }

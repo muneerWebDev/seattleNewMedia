@@ -1,5 +1,12 @@
 var scroll;
 var locoScroll;
+
+var containerOffset;
+var headerContainerOffset;
+var siteHeaderHeight;
+var siteFooterHeight;
+var worksListingIntroHeight;
+
 jQuery(document).ready(function () {
 
     jQuery(window).on('load', function () {
@@ -10,18 +17,22 @@ jQuery(document).ready(function () {
             jQuery("body").addClass("loaded");
             tabFilters();
         }, 300);
-    })
 
+        setTimeout(function () {
+            window.dispatchEvent(new Event('resize'));
+        }, 1000);  
+    })
+    simpleReadmore();
 });
 
 
 function getDynamicDimensions() {
     //getting values
-    var containerOffset = jQuery(".container").offset().left;
-    var headerContainerOffset = jQuery(".header-container").offset().left;
-    var siteHeaderHeight = jQuery(".siteHeader").innerHeight();
-    var siteFooterHeight = jQuery("#sitefooter").innerHeight();
-    var worksListingIntroHeight = jQuery(".work-listing-page .intro .column").innerHeight();
+    containerOffset = jQuery(".container").offset().left;
+    headerContainerOffset = jQuery(".header-container").offset().left;
+    siteHeaderHeight = jQuery(".siteHeader").innerHeight();
+    siteFooterHeight = jQuery("#sitefooter").innerHeight();
+    worksListingIntroHeight = jQuery(".work-listing-page .intro .column").innerHeight();
     //setting values
     jQuery("body").css({
         "--containerOffset": containerOffset + 'px',
@@ -123,12 +134,35 @@ function mouseCursor() {
     (function () {
         scroll = new LocomotiveScroll();
     })();
+
     locoScroll = new LocomotiveScroll({
         el: document.querySelector(".page-wrap"),
         smooth: true,
         getDirection: true
     });
-    // }
+
+    var lastScrollTop = 0;
+    locoScroll.on('scroll', (position) => {
+        if ((position.scroll.y) > 50) {
+            document.querySelector('body').classList.add('scrolled');
+
+        } else {
+            document.querySelector('body').classList.remove('scrolled');
+        }
+
+        var st = position.scroll.y;
+        if (st > lastScrollTop) {
+            // downscroll code
+            jQuery("body").addClass("hideNav");
+        } else {
+            // upscroll
+            jQuery("body").removeClass("hideNav");
+        }
+        lastScrollTop = st;
+
+    });
+
+
 }
 
 //tabFilters
@@ -173,4 +207,19 @@ function tabFilters() {
         //fixing imges parallax issue after filtering by faking a window resize
         window.dispatchEvent(new Event('resize'));
     });
+}
+
+function simpleReadmore(){
+    jQuery(".show_hide").click(function(){
+        if(jQuery(this).hasClass("toggle-text")){
+            if(jQuery(this).text()=='read more'){
+                jQuery(this).text("read less")
+            }else{
+                jQuery(this).text("read more")
+            }
+        }
+        jQuery(this).siblings(".more-content").slideToggle(function(){
+            window.dispatchEvent(new Event('resize'));
+        });
+    })
 }

@@ -26,7 +26,7 @@ get_header(); ?>
                             }
                             ?> -->
 
-                    <span>Work </span> > <span class="active">WolfPack AI</span>
+                    <span>Work </span> > <span class="active">Clubhouse Mobile Mini Golf </span>
                 </div>
             </div>
 
@@ -46,7 +46,11 @@ get_header(); ?>
                 </div>
                 <div class="content-space">
                     <p>
-                        Crazy golf hire by Clubhouse Mobile Mini Golf is the ultimate centre piece for any corporate event. With a range of branding options to keep the course on-brand, whether you are hosting a team bonding session, celebrating a holiday party or launching a new product, our course is sure to impress. Our in-house event teams hold decades of experience in event planning - let us handle the details.
+                        From organizing transportable mini golf for private events, wedding events to corporate events, Clubhouse, headquartered in London, features a range of fun mini golf event options. Clubhouse is an organization of many talented cross-disciplinary teams, who come with over a decade of experience in event planning and are capable of delivering a stunning, crazy-fun portable mini golf courses.
+                    </p>
+                    <p><b>In 2021, they decided to reinvent their digital experience.</b></p>
+                    <p>
+                        They did an extensive search for the right partner to design and deliver the latest digital experience for their portable golf course business, before finally choosing to team up with Seattle New Media. Clubhouse needed a brand-new digital platform that could represent their golf course event sales online beautifully. Seattle New Media recommended using the Webflow platform to reinvent their website, given the number of features that the platform offers.
                     </p>
                 </div>
             </div>
@@ -60,8 +64,26 @@ get_header(); ?>
                 <div class="content-space">
 
                     <div class="links">
-                        <a href="javaScript:void(0)" class="btn-link-primary external">Website Design </a>
+                        <a href="javaScript:void(0)" class="btn-link-primary external">Website Design</a>
                         <a href="javaScript:void(0)" class="btn-link-primary external">Digital Marketing</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group">
+
+                <div class="title-space">
+                    <h6>Technologies Used</h6>
+                </div>
+
+                <div class="content-space">
+
+                    <div class="links">
+                        <a href="javaScript:void(0)" class="btn-link-primary">Webflow</a>
+                        <a href="javaScript:void(0)" class="btn-link-primary">Photoshop</a>
+                        <a href="javaScript:void(0)" class="btn-link-primary">CSS</a>
+                        <a href="javaScript:void(0)" class="btn-link-primary">JavaScript</a>
                     </div>
 
                 </div>
@@ -76,7 +98,7 @@ get_header(); ?>
                 <div class="content-space">
 
                     <a href="javaScript:void(0)" class="link">
-                        http://projectlink.com
+                        https://clubhouseminigolf.com
                     </a>
 
                 </div>
@@ -112,25 +134,13 @@ get_header(); ?>
 
     <section class="layout-1">
         <div class="container">
-
             <div class="group">
                 <div class="title-space"></div>
                 <div class="content-space skewed" data-scroll>
 
-                    <h3>Interactive <br>
-                        Design</h3>
+                    <h3>The<br>Challenge</h3>
                     <p>
-                        Crazy golf hire by Clubhouse Mobile Mini Golf is the ultimate centre piece for any
-                        corporate
-                        event.
-                        With a range of branding options to keep the course on-brand, whether you are hosting a
-                        team
-                        bonding
-                        session, celebrating a holiday party or launching a new product, our course is sure to
-                        impress.
-                        Our
-                        in-house event teams hold decades of experience in event planning - let us handle the
-                        details.
+                        Amid the vast number of event planning websites based out of London, Clubhouse wanted to have its website endowed with a touch of uniqueness with regard to design and color choice, so that it would stand out from the rest.
                     </p>
                 </div>
             </div>
@@ -138,7 +148,7 @@ get_header(); ?>
     </section>
 
     <section class="text-center">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/multi-cards.jpg" class="img-fluid"data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/multi-cards.jpg" class="img-fluid" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/clubhouse/responsive.jpg" class="img-fluid w-100">
     </section>
 
@@ -171,25 +181,23 @@ get_header(); ?>
     <section class="layout-2">
         <div class="container">
 
+
             <div class="group">
 
                 <div class="title-space skewed" data-scroll>
-                    <h4>ATOL Sigma Online <br>
-                        Cash Registers: trade, <br>
-                        services, food
+                    <h4>Our Approach
                     </h4>
                 </div>
 
                 <div class="content-space skewed" data-scroll>
 
                     <p>
-                        There are many variations of passages of<br>
-                        Lorem Ipsum available, but the majority have <br>
-                        suffered alteration.
+                        Our team of designers at Seattle New Media collaborated to brainstorm on what could be done to make the website stand out, without losing sight of a high-quality user experience. We decided to make use of some of the latest technologies available at our disposal. After a couple of discussions with the team at Clubhouse, we decided to use Webflow as our client emphasized prioritizing color choice as the main requirement for this project.
                     </p>
 
                 </div>
             </div>
+
 
             <div class="even-images-group">
 
@@ -207,6 +215,21 @@ get_header(); ?>
             <div class="fullwidth-big-title skewed" data-scroll>
                 <h2>Aesthetics, <br>
                     convenience, sales</h2>
+
+                <div class="small">
+                    <p>
+                        Webflow is one of the emerging platforms that empowers designers to build and customize professional-looking websites in a completely visual canvas with no code. This platform enabled our team to make edits on-page, as it comes with a drag-and-drop builder.
+                    </p>
+                    <p>
+                        Working with Webflow gave our designers full control of HTML5, CSS3, and JavaScript, making it even easier to create a website like our client had in their mind. We also worked on enhancing the font styles to give that unique feel.
+                    </p>
+                    <p>
+                        <b class="primary">
+                            Our client was thrilled with the results. <br>
+                            Contact Seattle New Media today for a consultation.
+                        </b>
+                    </p>
+                </div>
             </div>
         </div>
     </section>

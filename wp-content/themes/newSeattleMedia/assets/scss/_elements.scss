@@ -43,6 +43,20 @@ html {
 
 }
 
+
+a {
+    color: $wolfpack_bg;
+    font-weight: $h1-font-weight;
+    transition: .3s;
+    text-decoration: none;
+
+    &.link {
+        color: $purple-600;
+        font-size: $h6-font-size;
+        line-height: inherit;
+    }
+}
+
 body {
     font-family: $poppins;
     color: $body-color;
@@ -65,9 +79,9 @@ body {
     }
 }
 
-// .page-wrap {
-//     padding-top: var(--navbarHeight);
-// }
+.page-wrap {
+    padding-top: var(--navbarHeight);
+}
 
 .base-font-size {
     font-size: $font-size-base;
@@ -169,18 +183,24 @@ a {
     }
 }
 
+.small {
+    font-size: $p-small-font-size;
+    line-height: $p-small-line-height;
 
+    &>* {
+        font-size: $p-small-font-size;
+        line-height: $p-small-line-height;
+    }
+}
 
-a {
-    color: $wolfpack_bg;
-    font-weight: $h1-font-weight;
-    transition: .3s;
-    text-decoration: none;
+// for ios
+@supports (-webkit-touch-callout: none) {
+    .small {
+        line-height: calc(#{$p-small-line-height} - 1.5rem);
 
-    &.link {
-        color: $purple-600;
-        font-size: $h6-font-size;
-        line-height: inherit;
+        &>* {
+            line-height: calc(#{$p-small-line-height} - 1.5rem);
+        }
     }
 }
 
@@ -191,6 +211,11 @@ img {
 .btn {
     text-decoration: none;
     background: transparent;
+    cursor: pointer;
+}
+
+.primary{
+    color: $purple-600;
 }
 
 .btn-link-primary {
@@ -216,6 +241,16 @@ img {
             margin-left: .8rem;
             font-size: 1.6rem;
         }
+    }
+}
+.show_hide{
+    border: 1px solid;
+    color: $white !important;
+    text-transform: uppercase;
+    padding: 7px 22px;
+    &:hover{
+        background: $white;
+        color: $body-color !important;
     }
 }
 
@@ -286,7 +321,7 @@ main {
         display: inline-block;
         width: 10rem;
         height: 10rem;
-        border: .8rem solid $gray-400;
+        border: .8rem solid $gray-200;
         position: absolute;
         rotate: 0;
         top: 50%;
@@ -411,7 +446,7 @@ button {
 }
 
 .breadcrumb {
-    // background: $gray-200;
+    // background: $gray-100;
     // padding: 1rem 2rem;
     display: flex !important;
     margin: 2rem 0;
@@ -436,12 +471,14 @@ button {
     flex-wrap: wrap;
 
     .tab-item {
-        padding: .2rem 1.3rem;  
+        padding: .2rem 1.3rem;
         text-transform: uppercase;
         font-weight: $h1-font-weight;
         cursor: pointer;
         border: 2px solid transparent;
         transition: .3s;
+        font-size: $font-size-base;
+
         &.active {
             border: 2px solid;
         }

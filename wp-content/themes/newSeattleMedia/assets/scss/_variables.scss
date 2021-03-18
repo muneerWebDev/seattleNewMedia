@@ -13,13 +13,13 @@ $orange: #FF8124;
 $white: white;
 
 $scrollbar-track-gray:gba(222, 222, 222, .75);
-$gray-200: #EFEFEF;
-$gray-300: #E3E3E3;
-$gray-400: #CACACC;
-$gray-500: #B2B2B2;
-$gray-600: #92959C;
-$gray-700: #363636;
-$gray-800: #22252B;
+$gray-100: #EFEFEF;
+$gray-200: #CACACC;
+$gray-300: #92959C;
+$gray-400: #363636;
+$gray-500: #292929;
+$gray-600: #191919;
+
 
 $purple-gray: #8B7A80;
 $purple-200: #d3a9d8;
@@ -46,17 +46,20 @@ $h4-font-size: 4rem;
 $h5-font-size: 3rem;
 $h6-font-size: 2.4rem;
 $p-font-size: 2.6rem;
+$p-small-font-size: 2rem;
 
 $h2-line-height: 10rem;
 $h3-line-height: 6.1rem;
 $h4-line-height: 4.8rem;
 $p-line-height: 4.4rem;
+$p-small-line-height: 3.4rem;
 //font weight
 $font-weight-lighter: 100;
 $font-weight-light: 200;
 $font-weight-medium: 400;
-$headings-font-weight: 700;
 $h1-font-weight: 500;
+$font-weight-semibold: 600;
+$headings-font-weight: 700;
 
 //grid
 $breakpoints: (xs: 0,

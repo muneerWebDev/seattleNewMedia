@@ -11,10 +11,10 @@ get_header(); ?>
 
 <main class="work-listing-page" id="work-listing-page">
 
-    <section class="intro layout-2">
+    <section class="intro">
         <div class="container">
             <div class="two-column-group">
-                <div class="column">
+                <div class="column d-none d-md-block">
                     <h2>All Projects</h2>
                 </div>
                 <div class="column">
@@ -39,12 +39,14 @@ get_header(); ?>
     </section>
 
 
-    <section class="even-images-group layout-2">
+    <section class="even-images-group">
         <div class="container">
-            <div class="group" tabContentContainer="work-list-tabs-container" >
+            <div class="group" tabContentContainer="work-list-tabs-container">
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/Arete-solution.jpg" class="img-fluid" data-scroll data-scroll-speed=".5">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
+                    <div class="img-wrap">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/Arete-solution.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Website Design</div>
@@ -52,10 +54,12 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="digital-marketing">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-www.clubhouseminigolf.com-.jpg" class="img-fluid" data-scroll data-scroll-speed="1">
+                <a href="<?php echo get_permalink(get_page_by_title('Clubhouse')) ?>" class="image with-subtext" tabContent="work-list-tabs" tabGroup="digital-marketing">
+                    <div class="img-wrap" >
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-www.clubhouseminigolf.com-.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Digital Marketing</div>
@@ -63,10 +67,12 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-www.skoposbronzeworks.com-.jpg" class="img-fluid" data-scroll data-scroll-speed=".5">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
+                    <div class="img-wrap">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-www.skoposbronzeworks.com-.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Website Design</div>
@@ -74,11 +80,13 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-legacyhomesnebraska.com-.jpg" class="img-fluid" data-scroll data-scroll-speed="1">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
+                    <div class="img-wrap" >
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-legacyhomesnebraska.com-.jpg" class="img-fluid">
 
+                    </div>
                     <div class="text">
                         <div class="categ h6">Website Design Wordpress support</div>
                         <div class="title h4">Legacy homes</div>
@@ -86,10 +94,12 @@ get_header(); ?>
                             text. It has roots in a piece of classical </p>
                     </div>
 
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="branding">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/http-picor-nms.com-.jpg" class="img-fluid" data-scroll data-scroll-speed=".5">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="branding">
+                    <div class="img-wrap">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/http-picor-nms.com-.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Branding</div>
@@ -97,10 +107,12 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-foundrybythepark.com--–-1.jpg" class="img-fluid" data-scroll data-scroll-speed="1">
+                <a href="<?php echo get_permalink(get_page_by_title('Wolfpack AI')) ?>" class="image with-subtext" tabContent="work-list-tabs" tabGroup="website">
+                    <div class="img-wrap" >
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-foundrybythepark.com--–-1.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Website Design</div>
@@ -108,10 +120,12 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="branding">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-foundrybythepark.com-.jpg" class="img-fluid" data-scroll data-scroll-speed=".5">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="branding">
+                    <div class="img-wrap">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-foundrybythepark.com-.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Branding</div>
@@ -119,21 +133,25 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="digital-marketing">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/Iran.jpg" class="img-fluid" data-scroll data-scroll-speed="1">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="digital-marketing">
+                    <div class="img-wrap">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/Iran.jpg" class="img-fluid" >
 
+                    </div>
                     <div class="text">
                         <div class="categ h6">Digital Marketing</div>
                         <div class="title h4">Pourdvoud center</div>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="digital-marketing">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/Iran-–-1.jpg" class="img-fluid" data-scroll data-scroll-speed=".5">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="digital-marketing">
+                    <div class="img-wrap">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/Iran-–-1.jpg" class="img-fluid" >
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Digital Marketing</div>
@@ -141,10 +159,12 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
-                <div class="image with-subtext" tabContent="work-list-tabs" tabGroup="branding">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-bakare.com-.jpg" class="img-fluid" data-scroll data-scroll-speed="1">
+                <a href="javaScript:void(0)" class="image with-subtext" tabContent="work-list-tabs" tabGroup="branding">
+                    <div class="img-wrap" >
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/work-listing/https-bakare.com-.jpg" class="img-fluid">
+                    </div>
 
                     <div class="text">
                         <div class="categ h6">Branding</div>
@@ -152,7 +172,7 @@ get_header(); ?>
                         <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random
                             text. It has roots in a piece of classical </p>
                     </div>
-                </div>
+                </a>
 
             </div>
         </div>
